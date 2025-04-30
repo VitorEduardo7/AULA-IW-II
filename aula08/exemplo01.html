@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="num1" placeholder="DIGITE NUM1">
+    <input type="number" name="" id="num2" placeholder="DIGITE NUM2">
+    <button id="btn_somar" onclick="somar()">SOMAR</button>
+    <button id="btn_subtrair" onclick="subtrair()">SUBTRAÇÃO</button>
+    <button id="btn_multiplicar" onclick="multiplicar()">MULTIPLICACÃO</button>
+    <button id="btn_dividir" onclick="dividir()">DIVISÃO</button>
+    <br>
+    <button id="btn_limpar" onclick="limpar()">LIMPAR</button>
+    <hr>
+    <p >O Resultado é: <span id="result"></span> </p>
+
+    <script>
+        function somar(){
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = document.getElementById("result");
+            var soma = n1 + n2;
+
+          result.innerHTML = soma;
+        }
+
+        function limpar(){
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("result").innerHTML = "";
+            
+        }
+
+        function subtrair(){
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = document.getElementById("result");
+            var subtrair = n1 - n2;
+
+            result.innerHTML = subtrair;
+        }
+
+        function multiplicar(){
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = document.getElementById("result");
+            var multiplicar = n1 * n2;
+
+            result.innerHTML = multiplicar;
+        }
+
+        function dividir(){
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = document.getElementById("result");
+            var dividir = n1 / n2;
+
+            result.innerHTML = dividir;
+        }
+    </script>
+</body>
+</html>
